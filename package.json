@@ -1,0 +1,28 @@
+{
+  "name": "tsconfig-paths-bug-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsc-watch --noClear --project . --onSuccess \"npm run dev:start\"",
+    "dev:start": "node --require ts-node/register/transpile-only --require tsconfig-paths/register --require source-map-support/register ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "tsc-watch": "^4.2.3"
+  },
+  "dependencies": {
+    "@types/node": "^13.13.0",
+    "source-map-support": "^0.5.17",
+    "ts-node": "^8.8.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3",
+    "typescript-transform-paths": "^1.1.14"
+  },
+  "keywords": [],
+  "author": "",
+  "files": [
+    "dist/**/*"
+  ],
+  "license": "ISC"
+}
